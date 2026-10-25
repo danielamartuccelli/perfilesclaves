@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Networking CPII 2026 · FAO Perú</title>
+<meta name="description" content="App de networking para la Cumbre Peruana de Inversión de Impacto 2026 · FAO Perú">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="top"><div class="wrap">
+    <img src="assets/fao_logo_color.jpg" alt="FAO">
+    <div class="event">Cumbre Peruana de Inversión de Impacto · 26–27 oct 2026</div>
+  </div></div>
+  <div class="band"><div class="wrap">
+    <div class="grow">
+      <h1>Networking CPII 2026 · FAO Perú</h1>
+      <p>¿Quién es quién? Organizaciones, personas, estado de contacto y mapa de relaciones.</p>
+    </div>
+    <div class="gsearch">
+      <input id="gs" type="search" autocomplete="off" placeholder="Buscar persona u organización…" aria-label="Buscar">
+      <div class="gresults" id="gr"></div>
+    </div>
+  </div></div>
+  <nav class="tabs"><div class="wrap" id="tabs">
+    <a href="#/resumen" data-v="resumen">Resumen</a>
+    <a href="#/organizaciones" data-v="organizaciones">Organizaciones</a>
+    <a href="#/personas" data-v="personas">Personas</a>
+    <a href="#/agenda" data-v="agenda">Agenda</a>
+    <a href="#/red" data-v="red">Red de actores</a>
+    <a href="#/alianzas" data-v="alianzas">Alianzas</a>
+    <a href="#/leyenda" data-v="leyenda">Leyenda y alertas</a>
+  </div></nav>
+</header>
+
+<main><div class="wrap">
+  <section class="view" id="v-resumen"></section>
+  <section class="view" id="v-organizaciones"></section>
+  <section class="view" id="v-personas"></section>
+  <section class="view" id="v-agenda"></section>
+  <section class="view" id="v-red"></section>
+  <section class="view" id="v-alianzas"></section>
+  <section class="view" id="v-leyenda"></section>
+</div></main>
+
+<footer><div class="wrap">
+  <img src="assets/fao_logo_blanco.png" alt="FAO">
+  <div>Uso interno FAO Perú · Datos: Excel «CPII2026_Networking_FAO» + búsqueda web (23-oct-2026). [V] verificado · [I] inferencia · [PC] por confirmar.</div>
+  <div class="note" style="color:#D9D9D9;margin-top:4px">Los estados de seguimiento se guardan solo en este navegador. Usa «Exportar respaldo» para llevarlos a otro dispositivo.</div>
+  <div class="toolbar">
+    <button class="btn" id="b-exp">Exportar respaldo (.json)</button>
+    <button class="btn" id="b-csv">Exportar seguimiento (.csv)</button>
+    <button class="btn" id="b-imp">Importar respaldo</button>
+    <input type="file" id="f-imp" accept="application/json" hidden>
+  </div>
+</div></footer>
+
+<div class="drawer-bg" id="dbg"></div>
+<aside class="drawer" id="drawer" aria-hidden="true"></aside>
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/network.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
